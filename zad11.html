@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{background-color: black;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>konwerter</h2>
+  <div class="button">
+   <button onclick="convert('poundstokilogram')"></button>
+
+   <button onclick="convert('poundstokilogram')"></button>
+
+   <button onclick="convert('poundstokilogram')"></button>
+
+   <button onclick="convert('poundstokilogram')"></button>
+
+   <button onclick="convert('poundstokilogram')"></button>
+
+   <button onclick="convert('poundstokilogram')"></button>
+  </div>
+  <div id="result" class="result"></div>
+  <script>
+
+    function showresults(message){
+        var resultDiv =document.getElementById('result')};
+        resultDiv.innerHTML = message
+        resultDiv.classlist.add('show')
+
+        function convert(convrsiontype){
+            var value = prompt("podaj wartość")
+            if (!value || isNaN(value)){
+                alert("debil")
+                return;
+            }
+            var results;
+            switch (convrsiontype){
+                case 'poundstokilogram':
+                    resultDiv=parseFloat(value) /2.20462;
+                    showresults(value+ "funtów to "+ result.tofixed(2)+"kilogramóf"  );
+                    break;
+
+                    case'kilogramstopounds':
+                    results = parseFloat(value) * 2.20462
+                    showresults(value+"kilogramow to" +results.tofixed(2)+ "funtów");
+
+            }
+
+            }
+        
+
+  </script>
+</body>
+</html>
