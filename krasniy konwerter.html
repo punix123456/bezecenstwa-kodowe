@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+       .wall {
+
+    border-radius: 40%;
+    position: relative;
+    top: 570px;
+    left: 650px;
+    height: 210px;
+    width: 601px;
+    background-color: #dddbcb;}
+            .result {
+                font-family: 'Oswald', sans-serif;
+                z-index: 999;
+                font-weight: 900;
+                color: #0092cc;
+                position: absolute;
+                top: 65%;
+                left: 730px;
+                text-align: center;
+
+                font-size: 44px;
+
+                padding: 15px;
+            }
+      body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+.buttons {
+    position: absolute;
+   
+    position: fixed;
+    bottom:10px left 50%;
+}
+button {
+    
+    height: 100px;
+    width: 140px;
+    background-color: #323232;
+    color: #0092cc;
+    border: none;
+    padding: 20px;
+    border-radius: 45%;
+    cursor: pointer;
+}
+h2{font-family: 'Oswald', sans-serif;
+color: #969696;
+font-size: 70px;}
+
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wall"></div>
+        <h2>Konwerter</h2>
+        <div class="button">
+            <button onclick="convert('poundstokilogram')"></button>
+
+            <button onclick="convert('poundstokilogram')"></button>
+
+            <button onclick="convert('poundstokilogram')"></button>
+
+            <button onclick="convert('poundstokilogram')"></button>
+
+            <button onclick="convert('poundstokilogram')"></button>
+
+            <button onclick="convert('poundstokilogram')"></button>
+        </div>
+        <div id="result" class="result"></div>
+        <script>
+
+            function showresults(message) {
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = message;
+                resultDiv
+                    .classList
+                    .add('show');
+            }
+
+            function convert(convrsiontype) {
+                var value = prompt("podaj wartość")
+                if (!value || isNaN(value)) {
+                    alert("debil")
+                    return;
+                }
+                var results;
+                switch (convrsiontype) {
+                    case 'poundstokilogram':
+                        resultDiv = parseFloat(value) / 2.20462;
+                        showresults(
+                            value + "funtów to " + resultDiv.toFixed(2) + "kilogramóf"
+                        );
+                        break;
+
+                    case 'kilogramstopounds':
+                        results = parseFloat(value) * 2.20462
+                        showresults(value + "kilogramow to" + resultsdiv.toFixed(2) + "funtów");
+
+                }
+
+            }
+        </script>
+    </body>
+</html>
