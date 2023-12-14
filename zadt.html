@@ -3,32 +3,34 @@
 
 	<head>
 
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Document</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
 	</head>
 
 	<body>
-	    <div id="mojdiv">id mojdiv</div>
-	    <div class="mojaklasa">element mojaklasa1</div>
-	    <div class="mojaklasa">element mojaklasa2</div>
-	    <p>paragraf 1</p>
-	    <p>paragraf 2</p>
-	    <script>
-	        var zmiana = document.getElementById("mojdiv").style.backgroundColor = "green"; //1
-	        zmiana
+		<div id="mojdiv">id mojdiv</div>
+		<div class="mojaklasa">element mojaklasa1</div>
+		<div class="mojaklasa">element mojaklasa2</div>
+		<p>paragraf 1</p>
+		<p>paragraf 2</p>
+		<script>
+			var zmiana = document.getElementById("mojdiv").style.backgroundColor = "green"; //1
+			zmiana
 
-	        for (var i = 0; i < 2; i++) {
-	            var elementy = document.getElementsByClassName("mojaklasa")
-	            elementy[i].textContent = "123"
-	        }
+			for (var i = 0; i < 2; i++) {
+				var elementy = document.getElementsByClassName("mojaklasa")
+				elementy[i].textContent = "123"
+			}
 
-	        for (var i = 0; i < 2; i++) {
-	            var niewiem = document.getElementsByTagName('p')
-	            niewiem[i].style.color = "blue";
+			for (var i = 0; i < 2; i++) {
+				var niewiem =
+				document.getElementsByTagName('p')
+				niewiem[i].style.color = "blue";
 
-	        }
-	    </script>
+			}
+			var cztery = document.querySelector(".mojaklasa").style.backgroundColor = "red";
+		</script>
 	</body>
 
 	</html>
