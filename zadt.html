@@ -15,21 +15,21 @@
 		<p>paragraf 1</p>
 		<p>paragraf 2</p>
 		<script>
-			var zmiana = document.getElementById("mojdiv").style.backgroundColor = "green"; //1
+			var zmiana = document.getElementById("mojdiv").style.backgroundColor = "green"; //po id
 			zmiana
 
-			for (var i = 0; i < 2; i++) {
+			for (var i = 0; i < 2; i++) { //wszystkie z klasy
 				var elementy = document.getElementsByClassName("mojaklasa")
 				elementy[i].textContent = "123"
 			}
 
-			for (var i = 0; i < 2; i++) {
+			for (var i = 0; i < 2; i++) { //wszystkie p 
 				var niewiem =
 				document.getElementsByTagName('p')
 				niewiem[i].style.color = "blue";
 
 			}
-			var cztery = document.querySelector(".mojaklasa").style.backgroundColor = "red";
+			var cztery = document.querySelector(".mojaklasa").style.backgroundColor = "red";//pierwszy z grupy
 		</script>
 	</body>
 
